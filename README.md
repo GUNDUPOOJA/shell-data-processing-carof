@@ -21,6 +21,7 @@ cat empty.txt
 - curl - get source file from url
 ```Bash
 curl "URL://www.GOESHERE.com" > output.txt
+curl "http://shakespeare.mit.edu/hamlet/hamlet.5.2.html" > hamlet.txt
 ```
 - touch - create a new file if one doesn't already exist
 ```Bash
@@ -33,6 +34,7 @@ mkdir newFolder
 - tr - Transform contents of a file
 ```Bash
 tr 'start' 'end' < source.txt | sort 
+tr ' ' '\12' < hamlet.txt | sort | uniq -c | sort -nr > result.txt
 ```
 ## PowerShell
 - ni - creates an empty new item
